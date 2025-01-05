@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function goToLink(selectObject) {
+        var selectedValue = selectObject.value;
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      .desktop-menu {
+        font-family: "Quicksand", sans-serif;
+      }
+      select{
+       border: none;
+       font: inherit;
+       text-align: center;
+      }
+
+      select option:last-child {
+        color:var(--hospital-green);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="desktop-menu">
+        <select id="menu" onchange="goToLink(this)">
+        <option value="">My orders</option>
+        <option value="">My account</option>
+        <hr>
+        <option value="/login.html">Sing out</option>
+      </select>
+    </div>
+  </body>
+</html>
